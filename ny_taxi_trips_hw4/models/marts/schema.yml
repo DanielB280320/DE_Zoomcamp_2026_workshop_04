@@ -1,0 +1,11 @@
+models: 
+  - name: fact_trips
+    description: "Fact table containing enriched trip data for analysis."
+    columns:
+      - name: payment_type
+        description: "The method of payment used for the trip."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [1, 2, 3, 4, 5]
+                quote: false

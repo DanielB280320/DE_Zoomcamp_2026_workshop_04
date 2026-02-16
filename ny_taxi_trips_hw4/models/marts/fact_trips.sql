@@ -1,3 +1,4 @@
+--WITH enriched_tripdata AS (
 SELECT 
     T.trip_id,
     T.vendor_id,
@@ -25,7 +26,8 @@ SELECT
     T.payment_type,
     T.payment_description,
     T.trip_type,
-    T.congestion_surcharge
+    T.congestion_surcharge, 
+    T.service_type
 
 FROM {{ref('tripdata_consolidated')}} T
 LEFT JOIN {{ref('dim_zones')}} PZ

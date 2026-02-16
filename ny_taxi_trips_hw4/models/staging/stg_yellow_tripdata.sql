@@ -13,11 +13,9 @@ SELECT
     CAST(mta_tax AS NUMERIC) AS mta_tax,
     CAST(tip_amount AS NUMERIC) AS tip_amount,
     CAST(tolls_amount AS NUMERIC) AS tolls_amount,
-    NULL AS ehail_fee, 
     CAST(improvement_surcharge AS NUMERIC) AS improvement_surcharge,
     CAST(total_amount AS NUMERIC) AS total_amount,
     CAST(payment_type AS INT) AS payment_type,
-    1 AS trip_type,
     CAST(congestion_surcharge AS NUMERIC) AS congestion_surcharge
 
 FROM {{source('ny_taxi_trips_raw', 'yellow_tripdata')}}

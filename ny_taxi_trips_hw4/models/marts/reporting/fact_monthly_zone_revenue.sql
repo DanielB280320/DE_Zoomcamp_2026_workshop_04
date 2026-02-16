@@ -1,7 +1,7 @@
 SELECT 
     pickup_zone, 
     DATE_TRUNC(pickup_datetime, MONTH) AS Revenue_Month,
-    trip_type AS service_type,
+    service_type,
     SUM(passenger_count) AS total_passengers,
     SUM(trip_distance) AS total_distance,
     SUM(fare_amount) AS total_fare_amount,
