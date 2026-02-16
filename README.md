@@ -48,7 +48,7 @@ Your model fct_trips has been running successfully for months. A new value 6 now
                     values: [1, 2, 3, 4, 5]
                     quote: false
     
-    When we created an generic test like the previous one, dbt creates a model with the name 'accepted_values_fact_trips_payment_type__False__1__2__3__4__5.sql' within the compiled folder in our project; Then when we build the model that contains the test for a specified column, it executes the test model that is stored in the compiled folder and if the condition is true (condition = 1), the test execution will fail with an non-zero exit code:
+When we created an generic test like the previous one, dbt creates a model with the name 'accepted_values_fact_trips_payment_type__False__1__2__3__4__5.sql' within the compiled folder in our project; Then when we build the model that contains the test for a specified column, it executes the test model that is stored in the compiled folder and if the condition is true (condition = 1), the test execution will fail with an non-zero exit code:
 
     with all_values as (
 
